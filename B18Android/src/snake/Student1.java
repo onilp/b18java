@@ -3,9 +3,9 @@ package snake;
 public class Student1 {
 	int rollNo;
 	String name;
-	static String COLLEGE_NAME = "IIT";
+	static String COLLEGE_NAME = "IIT"; //static variable
 	
-	  static{
+	  static{ //static block
 		  System.out.println("static block is invoked");
 		  }  
 
@@ -15,17 +15,17 @@ public class Student1 {
 	}
 	
 	
-	public Student1(int r, String n) {//sravan
+	public Student1(int rollNo, String name) {//sravan
 		//super();
 		System.out.println("constructor is invoked");
-		rollNo = r;
-		name = n;
+		this.rollNo = rollNo;
+		this.name = name;
 	}
 
-	public Student1(int r) {//sravan
+	public Student1(int r) {//binsun
 		//super();
-		rollNo = r;
-		//name = n;
+		rollNo = rollNo;
+		//name = name;
 	}
 	
 	public void insertRecord(int r, String n) {
