@@ -8,6 +8,10 @@ public class Student1 {
 	  static{ //static block
 		  System.out.println("static block is invoked");
 		  }  
+	public Student1()
+	{
+		System.out.println("Hello this is default constructor");
+	}
 
 	
 	public static int calculateAverage(int a, int b, int c) {
@@ -17,6 +21,7 @@ public class Student1 {
 	
 	public Student1(int rollNo, String name) {//sravan
 		//super();
+		this();
 		System.out.println("constructor is invoked");
 		this.rollNo = rollNo;
 		this.name = name;
@@ -24,7 +29,7 @@ public class Student1 {
 
 	public Student1(int r) {//binsun
 		//super();
-		rollNo = rollNo;
+		this.rollNo = r;
 		//name = name;
 	}
 	
@@ -37,7 +42,7 @@ public class Student1 {
 			
 	}
 	
-	public void displayRecord() {
+	public void displayRecord(Student1 obj) {
 		System.out.println("name ="+name +"\nid ="+rollNo+"\ncollege ="+COLLEGE_NAME);
 	}
 	
@@ -45,9 +50,11 @@ public class Student1 {
 		//Student1 s1 = new Student1();//default constructor
 		//s1.insertRecord(007, "bond");
 		Student1 s1 = new Student1(7, "bond"); //sravan constructor
-		s1.displayRecord();
+		//s1.displayRecord();
 		Student1 s2 = new Student1(8,"abdul");
-		s2.displayRecord();
+		//s2.displayRecord();
+		//displayRecord(this)
+		
 	}
 
 }
