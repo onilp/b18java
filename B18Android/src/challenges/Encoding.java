@@ -51,10 +51,7 @@ public class Encoding {
 		if(s.matches("[^a-zA-Z&&[^0-9&&]]"))
 			System.out.println(c + " is Special Character.");
 			
-			
 	}
-	
-	
 	
 	public static void main(String [] args)
 	{
